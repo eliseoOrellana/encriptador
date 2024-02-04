@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador / Desencriptador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Encriptador / Desencriptador</h1>
+    <label for="inputText">Texto:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    
+    <p class="text-wrapper-3" id="warning"> <img class="bi-exclamation" src="img/bi_exclamation-circle-fill-1.png"/> Solo letras minúsculas y sin acentos</p>
+
+    <label for="operation">Operación:</label>
+    <select id="operation">
+      <option value="encrypt">Encriptar</option>
+      <option value="decrypt">Desencriptar</option>
+    </select>
+
+    <button  id="process" onclick="processText()">Procesar</button>
+
+    <label for="outputText">Resultado:</label>
+    <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+
+    <button onclick="copyToClipboard()">Copiar al portapapeles</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
